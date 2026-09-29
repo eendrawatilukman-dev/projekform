@@ -98,7 +98,7 @@
 <div class="napec-page">
     @if($useOfficialBranding)
         <div class="brand-wrap">
-            <img class="brand-logo" src="{{ asset('assets/pertamina-logo.png') }}" alt="Pertamina">
+            <img src="{{ asset('assets/pertamina-logo.png') }}" alt="Logo Pertamina">
         </div>
     @else
         <div class="brand-wrap">
