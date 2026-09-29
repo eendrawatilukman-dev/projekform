@@ -95,7 +95,7 @@
 <body>
 <div class="napec-page">
     <div class="brand-wrap">
-        <img class="brand-logo" src="/pertamina-logo.png" alt="Logo Pertamina">
+        <img class="brand-logo" src="/images/pertamina-logo.png" alt="Logo Pertamina">
     </div>
     @yield('content')
 </div>
