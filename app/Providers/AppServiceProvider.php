@@ -14,8 +14,7 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        // Paksa semua helper asset() dan route() menggunakan HTTPS di Vercel
-        if (app()->environment('production') || isset($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
+        if (app()->environment('production') || isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
             URL::forceScheme('https');
         }
     }
