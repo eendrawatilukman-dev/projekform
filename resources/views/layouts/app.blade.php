@@ -18,7 +18,7 @@
             font-size: 16px;
         }
         .napec-page { min-height: 100vh; }
-        .brand-wrap { text-align: center; }
+        .brand-wrap { text-align: center; padding-top: 20px; }
         .brand-logo { width: min(850px, 78vw); height: auto; display: inline-block; }
         .brand-placeholder {
             width: min(560px, 78vw);
@@ -83,7 +83,6 @@
         @media (max-width: 700px) {
             .stats-grid { grid-template-columns: 1fr; }
             .admin-card { padding: 18px; }
-
             .page-heading { font-size: 24px; }
             .page-subheading { font-size: 17px; margin-bottom: 30px; }
             .language-buttons { gap: 12px; flex-direction: column; align-items: center; }
@@ -94,17 +93,10 @@
     </style>
 </head>
 <body>
-@php($useOfficialBranding = filter_var(env('USE_OFFICIAL_BRANDING', false), FILTER_VALIDATE_BOOL))
 <div class="napec-page">
-    @if($useOfficialBranding)
-        <div class="brand-wrap">
-            <img src="/assets/pertamina-logo.png" alt="Logo Pertamina">
-        </div>
-    @else
-        <div class="brand-wrap">
-            <div class="brand-placeholder" aria-label="NAPEC">NAPEC</div>
-        </div>
-    @endif
+    <div class="brand-wrap">
+        <img class="brand-logo" src="{{ asset('assets/pertamina-logo.png') }}" alt="Logo Pertamina">
+    </div>
     @yield('content')
 </div>
 @stack('scripts')
