@@ -1,6 +1,6 @@
 <?php
 
-// 1. Buat folder sementara berizin akses penuh (writeable) di /tmp Vercel
+// 1. Menyiapkan direktori temporer di /tmp Vercel
 $dirs = [
     '/tmp/views',
     '/tmp/framework/sessions',
@@ -15,7 +15,7 @@ foreach ($dirs as $dir) {
     }
 }
 
-// 2. Override variabel lingkungan untuk path temporary & logging
+// 2. Set lokasi cache ke folder /tmp
 putenv('VIEW_COMPILED_PATH=/tmp/views');
 putenv('LOG_CHANNEL=stderr');
 putenv('APP_SERVICES_CACHE=/tmp/services.php');
