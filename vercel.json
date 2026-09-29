@@ -12,7 +12,11 @@
             "dest": "/public/assets/$1"
         },
         {
-            "src": "/(css|js|images|build|favicon.ico)(.*)",
+            "src": "/images/(.*)",
+            "dest": "/public/images/$1"
+        },
+        {
+            "src": "/(css|js|build|favicon.ico)(.*)",
             "dest": "/public/$1$2"
         },
         {
